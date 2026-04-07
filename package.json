@@ -1,0 +1,23 @@
+{
+  "name": "fundamentals-project-ts-template",
+  "version": "1.0.0",
+  "description": "Capstone Project TS Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"Dummy build script required for Autocode Compile\"",
+    "ts-compile": "npx tsc"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "typescript": "^6.0.2"
+  }
+}
