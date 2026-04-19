@@ -8,11 +8,12 @@
   "compile": "sass src/scss:dist/css --no-source-map",
   "watch:sass": "sass src/scss:dist/css --watch --no-source-map",
   "serve": "live-server",
-  "dev": "npm run compile && concurrently \"npm run watch:sass\" \"npm run serve\"",
+  "dev": "npm run compile && concurrently \"npm run watch:sass\" \"npm run serve\" \"npm run watch:ts\"",
 
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "echo \"Dummy build script required for Autocode Compile\"",
-    "ts-compile": "npx tsc"
+    "ts-compile": "npx tsc",
+    "watch:ts": "npx tsc --watch"
   },
   "repository": {
     "type": "git",

@@ -18,6 +18,7 @@
 @use "pages/catalog";
 @use "pages/product-details";
 @use "pages/about";
+@use "pages/contact";
 @use "pages/cart";
 
 @use "pages/cmo";
@@ -28,7 +29,6 @@
 @use "pages/product";
 
 
-// --- Homepage Styles --- //
 body {
   font-family: var(--font-primary);
   color: var(--color-b);

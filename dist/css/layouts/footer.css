@@ -64,7 +64,7 @@
 }
 .footer__benefits .benefits-grid .benefit-item {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   gap: 15px;
@@ -100,11 +100,6 @@
   grid-template-columns: 2fr;
   gap: var(--spacing-l);
 }
-@media (min-width: 768px) {
-  .footer__main .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 @media (min-width: 1024px) {
   .footer__main .footer-grid {
     grid-template-columns: 1fr 1fr 1fr 2fr;
@@ -137,6 +132,11 @@
   gap: 20px;
   width: 100%;
   grid-column: 4;
+}
+@media screen and (max-width: 768px) {
+  .footer__main .contact-info {
+    grid-column: span 2;
+  }
 }
 .footer__main .contact-info .contact-item {
   display: flex;

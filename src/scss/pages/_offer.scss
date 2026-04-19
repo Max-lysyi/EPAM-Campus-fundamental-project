@@ -30,6 +30,7 @@
     @media (max-width: 768px) {
       flex-direction: column;
       text-align: center;
+      gap: 20px;
     }
 
     .discount {
@@ -37,6 +38,9 @@
       font-weight: 900;
       color: var(--color-w);
       line-height: 1;
+      @media screen and (max-width: 768px) {
+        font-size: 7rem;
+      }
     }
     .discount-text {
       font-size: 1.25rem;

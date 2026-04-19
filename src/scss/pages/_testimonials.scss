@@ -3,7 +3,7 @@
 
 .testimonials {
   padding: var(--spacing-xl) 0;
-  background-color: var(--color-bg-gray);
+ 
 
   .container {
     @include container;
@@ -25,7 +25,7 @@
     padding: var(--spacing-l) var(--spacing-m);
     text-align: center;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px 10px rgba(0,0,0,0.05);
 
     img {
       width: 80px;
