@@ -1,0 +1,49 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+.hero {
+  background-color: var(--color-bg-gray);
+  padding: var(--spacing-xl) 0;
+  overflow: hidden;
+
+  .container {
+    @include container;
+    @include flex(space-between, center, column, var(--spacing-l));
+
+    @include mq-m {
+      flex-direction: row;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    max-width: 500px;
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: var(--spacing-s);
+
+      @include mq-m {
+        font-size: 3rem;
+      }
+    }
+
+    p {
+      color: var(--color-main-gray);
+      margin-bottom: var(--spacing-m);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  }
+
+  &__image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

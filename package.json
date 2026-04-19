@@ -4,10 +4,15 @@
   "description": "Capstone Project TS Template",
   "main": "index.js",
   "scripts": {
+    
+  "compile": "sass src/scss:dist/css --no-source-map",
+  "watch:sass": "sass src/scss:dist/css --watch --no-source-map",
+  "serve": "live-server",
+  "dev": "npm run compile && concurrently \"npm run watch:sass\" \"npm run serve\"",
+
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "echo \"Dummy build script required for Autocode Compile\"",
     "ts-compile": "npx tsc"
-
   },
   "repository": {
     "type": "git",
@@ -18,6 +23,9 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "concurrently": "^9.2.1",
+    "live-server": "^1.2.2",
+    "sass": "^1.99.0",
     "typescript": "^6.0.2"
   }
 }

@@ -1,0 +1,118 @@
+:root {
+  --color-b: #000000;
+  --color-w: #FFFFFF;
+  --color-main: #B92770;
+  --color-main-gray: #504E4A;
+  --color-bg-gray: #EFEFEF;
+  --color-bg-light: #F8F8F8;
+  --color-footer: #4A4A4A;
+  --color-border: #E5E5E5;
+  --font-primary: 'Montserrat', sans-serif;
+  --spacing-xs: 8px;
+  --spacing-s: 16px;
+  --spacing-m: 32px;
+  --spacing-l: 64px;
+  --spacing-xl: 100px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-w);
+  z-index: 1000;
+  border-bottom: 1px solid var(--color-border);
+  padding: 15px 0;
+}
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media (min-width: 1440px) {
+  .header__top {
+    max-width: 1400px;
+  }
+}
+.header__top {
+  margin-bottom: var(--spacing-s);
+}
+.header__socials {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 15px;
+}
+.header__socials a {
+  font-size: 1.2rem;
+  color: var(--color-b);
+  transition: color 0.3s;
+}
+.header__socials a:hover {
+  color: var(--color-main);
+}
+.header__socials img {
+  width: 20px;
+}
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--color-main);
+}
+.header__logo img {
+  background-color: var(--color-main);
+  border-radius: 25%;
+  padding: 4px;
+}
+.header__actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+.header__actions button {
+  font-size: 1.2rem;
+  color: var(--color-b);
+  transition: color 0.3s;
+}
+.header__actions button:hover {
+  color: var(--color-main);
+}
+.header__actions svg {
+  width: 24px;
+  height: 24px;
+}
+.header__nav {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--spacing-s);
+}
+.header__nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 40px;
+}
+.header__nav ul li a {
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+.header__nav ul li a:hover {
+  color: var(--color-main);
+}
+.header__nav ul li.active a {
+  color: var(--color-main);
+}

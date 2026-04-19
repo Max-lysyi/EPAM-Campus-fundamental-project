@@ -1,0 +1,62 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.product-card {
+  border-radius: 4px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  
+
+  &:hover {
+    .product-card__image {
+      img { 
+        box-shadow: 0 0px 50px 10px rgba(0,0,0,0.05);
+       }
+    }
+  }
+
+  .badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--color-main);
+    color: var(--color-w);
+    font-size: 0.7rem;
+    font-weight: 900;
+    padding: 4px 8px;
+    text-transform: uppercase;
+  }
+
+  &__image {
+    
+    margin-bottom: var(--spacing-m);
+    @include flex(center, center);
+    img {
+      transition: box-shadow 0.3s ease;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__info {
+    h4 {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .price {
+
+      font-weight: 700;
+      color: var(--color-main-gray);
+      font-size: 1.1rem;
+      margin-bottom: var(--spacing-m);
+    }
+  }
+
+  // .main-btn {
+  //   width: 100%;
+  // }
+}

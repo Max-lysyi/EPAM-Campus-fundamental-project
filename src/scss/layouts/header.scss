@@ -1,0 +1,81 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-w);
+  z-index: 1000;
+  border-bottom: 1px solid var(--color-border);
+  padding: 15px 0;
+
+  &__top {
+    @include flex(space-between, center);
+    @include container;
+    margin-bottom: var(--spacing-s);
+  }
+
+  &__socials {
+    @include flex(flex-start, center, row, 15px);
+    a {
+      font-size: 1.2rem;
+      color: var(--color-b);
+      transition: color 0.3s;
+      &:hover { color: var(--color-main); }
+    }
+    img {
+      width: 20px;
+    }
+  }
+
+  &__logo {
+    @include flex(center, center, row, 10px);
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--color-main);
+    img {
+      background-color: var(--color-main);
+      border-radius: 25%;
+      padding: 4px;
+      
+      
+    }
+  }
+
+  &__actions {
+    @include flex(flex-end, center, row, 20px);
+    button {
+      font-size: 1.2rem;
+      color: var(--color-b);
+      transition: color 0.3s;
+      &:hover { color: var(--color-main); }
+    }
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__nav {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--spacing-s);
+
+    ul {
+      @include flex(center, center, row, 40px);
+      
+      li a {
+        font-weight: 700;
+        font-size: 0.95rem;
+        transition: color 0.3s;
+        
+        &:hover {
+          color: var(--color-main);
+        }
+      }
+      
+      li.active a {
+        color: var(--color-main);
+      }
+    }
+  }
+}

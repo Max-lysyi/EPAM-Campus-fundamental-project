@@ -1,0 +1,52 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.testimonials {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--color-bg-gray);
+
+  .container {
+    @include container;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-m);
+    margin-top: var(--spacing-l);
+
+    @include mq-s {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__card {
+    background-color: var(--color-w);
+    padding: var(--spacing-l) var(--spacing-m);
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto var(--spacing-m);
+    }
+
+    p {
+      color: var(--color-main-gray);
+      line-height: 1.6;
+      font-size: 0.95rem;
+      margin-bottom: var(--spacing-m);
+      font-style: italic;
+    }
+
+    h4 {
+      color: var(--color-main);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@use '../abstracts/variables' as *;
+@use "sass:color";
+
+.main-btn {
+  background-color: var(--color-main);
+  color: var(--color-w);
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  
+  &:hover {
+    background-color: color.adjust(#B92770, $lightness: -10%);
+
+  }
+}

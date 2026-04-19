@@ -1,0 +1,36 @@
+@mixin flex ($cont: center, $item: center, $dir: row, $g: 0) {
+  display: flex;
+  justify-content: $cont;
+  align-items: $item;
+  flex-direction: $dir;
+  gap: $g;
+}
+
+@mixin mq-s {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mq-m {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin mq-l {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+  
+  @include mq-l {
+    max-width: 1400px;
+  }
+}
