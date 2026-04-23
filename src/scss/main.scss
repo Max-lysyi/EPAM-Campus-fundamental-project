@@ -1,20 +1,23 @@
 @use "abstracts/variables" as *;
 @use "abstracts/mixins" as *;
 
-// Base
+
 @use "base/reset";
 @use "base/fonts";
 
-// Components
-@use "components/buttons";
-@use "components/forms";
-@use "components/product-card";
 
-// Layouts
+@use "components/product-card";
+@use "components/buttons";
+@use "components/modal";
+@use "components/forms";
+
+
+
+
 @use "layouts/header";
 @use "layouts/footer";
 
-// Pages
+
 @use "pages/catalog";
 @use "pages/product-details";
 @use "pages/about";

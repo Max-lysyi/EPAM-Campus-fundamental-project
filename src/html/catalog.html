@@ -25,38 +25,121 @@
         </a>
       </div>
       
-      <a href="../index.html" class="header__logo">
+      <a href="/src/index.html" class="header__logo">
         <div class="header__logo-img">
-          <img src="../img/Homepage/Logo.svg" alt="Logo">
+          <img src="/src/img/Homepage/Logo.svg" alt="Logo">
         </div>
         <span class="header__logo-text">BEST SHOP</span>
       </a>
+      <button class="header__hamburger-btn" id="hamburger-btn">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
         
       <div class="header__actions">
-        <button aria-label="User Account">
+        <button id="login-modal-open-btn" aria-label="User Account">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         </button>
-        <button aria-label="Shopping Cart">
+        <button class="cart-trigger-btn" aria-label="Shopping Cart" onclick="window.location.href='/src/html/cart.html'">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span class="cart-badge header-cart-badge" style="display:none;">0</span>
         </button>
       </div>
     </div>
     
     <nav class="header__nav">
       <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li class="active"><a href="../html/catalog.html">Catalog<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a></li>
-        <li><a href="../html/about.html">About Us</a></li>
-        <li ><a href="../html/contact.html">Contact Us</a></li>
+        <li><a href="/src/index.html">Home</a></li>
+        <li  class="active"><a href="/src/html/catalog.html">Catalog<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a></li>
+        <li><a href="/src/html/about.html">About Us</a></li>
+        <li><a href="/src/html/contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <nav class="header__mobile-nav">
+      <ul>
+        <li><a href="/src/index.html">Home</a></li>
+        <li class="active"><a href="/src/html/catalog.html">Catalog<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a></li>
+        <li><a href="/src/html/about.html">About Us</a></li>
+        <li><a href="/src/html/contact.html">Contact Us</a></li>
+        <li>
+          <div class="header__mobile-actions">
+        <button id="login-modal-open-btn" aria-label="User Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
+        <button class="cart-trigger-btn" aria-label="Shopping Cart" onclick="window.location.href='/src/html/cart.html'">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span class="cart-badge header-cart-badge" style="display:none;">0</span>
+        </button>
+      </div>
+    </li>
+        <li>
+          <div class="header__mobile-socials">
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.9 3.56-.71 0-1.37-.2-1.95-.5v.05c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.52 8.52 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38 3.85 3.89 2.3 7.15 2.15c1.27-.06 1.64-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07c-4.27.2-6.78 2.71-6.98 6.98C0 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.27 2.71 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.27-.2 6.78-2.71 6.98-6.98C23.99 15.67 24 15.26 24 12s-.01-3.67-.07-4.95c-.2-4.27-2.71-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm5.8-9.67a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+        </a>
+      </div>
+        </li>
       </ul>
     </nav>
   </header>
 
+
   <main>
     <div class="container catalog-container">
       <div class="catalog-main">
+        <div class="catalog-filters">
+          <div class="filters-group">
+            <div class="filter-dropdown">
+              <button class="filter-btn">Category <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul class="filter-menu">
+                <li data-filter="category" data-value="carry-ons">Carry-ons</li>
+                <li data-filter="category" data-value="suitcases">Suitcases</li>
+                <li data-filter="category" data-value="luggage sets">Luggage Sets</li>
+                <li data-filter="category" data-value="kids' luggage">Kids' Luggage</li>
+              </ul>
+            </div>
+            <div class="filter-dropdown">
+              <button class="filter-btn">Color <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul class="filter-menu">
+                <li data-filter="color" data-value="red">Red</li>
+                <li data-filter="color" data-value="blue">Blue</li>
+                <li data-filter="color" data-value="green">Green</li>
+                <li data-filter="color" data-value="black">Black</li>
+                <li data-filter="color" data-value="grey">Grey</li>
+                <li data-filter="color" data-value="yellow">Yellow</li>
+                <li data-filter="color" data-value="pink">Pink</li>
+              </ul>
+            </div>
+            <div class="filter-dropdown">
+              <button class="filter-btn">Size <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul class="filter-menu">
+                <li data-filter="size" data-value="S">S</li>
+                <li data-filter="size" data-value="M">M</li>
+                <li data-filter="size" data-value="L">L</li>
+                <li data-filter="size" data-value="XL">XL</li>
+                <li data-filter="size" data-value="S-L">S-L</li>
+                <li data-filter="size" data-value="S, M, XL">S, M, XL</li>
+              </ul>
+            </div>
+            <div class="filter-dropdown">
+              <button class="filter-btn">Sales Status <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul class="filter-menu">
+                <li data-filter="salesStatus" data-value="true">On Sale</li>
+                <li data-filter="salesStatus" data-value="false">Regular</li>
+              </ul>
+            </div>
+          </div>
+          <button id="reset-filters" class="reset-btn">Reset Filters</button>
+        </div>
+        
         <div class="catalog-main__header">
-          <span class="results-text">Showing 1-12 Of 15 Results</span>
+          <span class="results-text" id="catalog-results-text">Showing 1-12 Of 15 Results</span>
           <div class="sort-box">
             <select aria-label="Sorting Dropdown">
               <option value="default">Default Sorting</option>
@@ -72,10 +155,8 @@
           
         </div>
 
-        <div class="catalog-pagination">
-          <a href="#" class="page-link active">1</a>
-          <a href="#" class="page-link">2</a>
-          <a href="#" class="page-next">NEXT <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a>
+        <div class="catalog-pagination" id="catalog-pagination">
+          
         </div>
       </div>
 
@@ -89,51 +170,7 @@
 
         <div class="top-best-sets">
           <h3>Top Best Sets</h3>
-          
-          <div class="best-set-item">
-            <div class="img-wrap"><img src="img/Catalog Page/set of suitcases red - small.png" alt="Set Red"></div>
-            <div class="info">
-              <p>Primis in faucibus aenean laoreet rhoncus ipsum eget.</p>
-              <div class="rating">★★★★★</div>
-              <span class="price">$1000</span>
-            </div>
-          </div>
-          
-          <div class="best-set-item">
-            <div class="img-wrap"><img src="img/Catalog Page/set of suitcases black - small.png" alt="Set Black"></div>
-            <div class="info">
-              <p>Vestibulum in elementum erat Interdum et malesuada fames.</p>
-              <div class="rating">★★★★★</div>
-              <span class="price">$1200</span>
-            </div>
-          </div>
-          
-          <div class="best-set-item">
-            <div class="img-wrap"><img src="img/Catalog Page/set of suitcases blue - small.png" alt="Set Blue"></div>
-            <div class="info">
-              <p>Laoreet rhoncus ipsum eget tempus raesent convallis.</p>
-              <div class="rating">★★★★☆</div>
-              <span class="price">$2100</span>
-            </div>
-          </div>
-          
-          <div class="best-set-item">
-            <div class="img-wrap"><img src="img/Catalog Page/set of suitcases yellow - small.png" alt="Set Yellow"></div>
-            <div class="info">
-              <p>Interdum et malesuada fames ante ipsum primis in faucibus.</p>
-              <div class="rating">★★★☆☆</div>
-              <span class="price">$1500</span>
-            </div>
-          </div>
-          
-          <div class="best-set-item">
-            <div class="img-wrap"><img src="img/Catalog Page/set of suitcases green - small.png" alt="Set Green"></div>
-            <div class="info">
-              <p>Rhoncus ipsum eget tempus Praesent convallis fermentum.</p>
-              <div class="rating">★★★★☆</div>
-              <span class="price">$1100</span>
-            </div>
-          </div>
+          <div id="top-sets-list"></div>
         </div>
       </aside>
     </div>
@@ -144,19 +181,19 @@
       <div class="container">
         <div class="benefits-grid">
           <div class="benefit-item">
-            <img src="./img/Homepage/footer1_img.png" alt="">
+            <img src="/src/img/Homepage/footer1_img.png" alt="">
             <p>Velit nisl sodales eget<br>donec quis volutpat orci.</p>
           </div>
           <div class="benefit-item">
-            <img src="./img/Homepage/footer2_img.png" alt="">
+            <img src="/src/img/Homepage/footer2_img.png" alt="">
             <p>Dolor eu varius. Morbi<br>fermentum velit nisl.</p>
           </div>
           <div class="benefit-item">
-            <img src="./img/Homepage/footer3_img.png" alt="">
+            <img src="/src/img/Homepage/footer3_img.png" alt="">
             <p>Malesuada fames ac ante<br>ipsum primis in faucibus.</p>
           </div>
           <div class="benefit-item">
-            <img src="./img/Homepage/footer4_img.png" alt="">
+            <img src="/src/img/Homepage/footer4_img.png" alt="">
             <p>Nisl sodales eget donec<br>quis volutpat orci.</p>
           </div>
         </div>
@@ -167,7 +204,7 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-col">
-            <h4>About Us</h4>
+            <h4> <a href="/src/html/about.html">About Us</a></h4>
             <ul>
               <li><a href="#">Organisation</a></li>
               <li><a href="#">Partners</a></li>
@@ -191,7 +228,7 @@
             </ul>
           </div>
           <div>
-          <h4>Contact Us</h4>
+          <h4> <a href="/src/html/contact.html">Contact Us</a></h4>
           <p class="company-desc" style="margin-bottom:20px;">Bendum dolor eu varius. Morbi fermentum velitsodales egetonec vulputate orci. Sed ipsum felis, tristique egestas et, convallis ac velin consequat nec luctus.</p>
           </div>
           <div class="footer-col_def">
@@ -235,6 +272,15 @@
       &copy; Copyright 2025
     </div>
   </footer>
+
+  <div id="not-found-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content text-center">
+      <h3 style="margin-bottom:15px;">Product Not Found</h3>
+      <p style="margin-bottom:20px;color:var(--color-main-gray);">We couldn't find any products matching your search.</p>
+      <button class="main-btn close-modal" style="width:100%;">Close</button>
+    </div>
+  </div>
+
   <script src="../../dist/js/main.js" type="module"></script>
 </body>
 </html>

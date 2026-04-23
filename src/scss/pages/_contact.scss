@@ -33,7 +33,7 @@
 }
 
 .contact-info-grid {
-  padding: var(--spacing-xxl) 0;
+  padding: var(--spacing-xl) 0;
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--spacing-xl);
@@ -81,7 +81,7 @@
 }
 
 .contact-feedback {
-  padding: 0 0 var(--spacing-xxl);
+  padding: var(--spacing-xl) 20px;
   @include flex(space-between, stretch, column, 40px);
 
   @include mq-m {
@@ -134,7 +134,7 @@
       input, textarea {
         width: 100%;
         padding: 12px 15px;
-        border: 1px solid rgba(185, 39, 112, 0.4); /* Pinkish border to match design */
+        border: 1px solid rgba(185, 39, 112, 0.4); 
         border-radius: 4px;
         outline: none;
         font-size: 0.95rem;

@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="./img/Homepage/Logo.svg">
+  <link rel="icon" href="../img/Homepage/Logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/dist/css/main.css">
-  <title>BEST SHOP - Home</title>
+  <title>BEST SHOP - Product Details</title>
 </head>
 <body>
-  <header class="header">
+   <header class="header">
     <div class="header__top">
       <div class="header__socials">
         <a href="#" aria-label="Facebook">
@@ -25,7 +25,7 @@
         </a>
       </div>
       
-      <a href="index.html" class="header__logo">
+      <a href="/src/index.html" class="header__logo">
         <div class="header__logo-img">
           <img src="/src/img/Homepage/Logo.svg" alt="Logo">
         </div>
@@ -48,7 +48,7 @@
     
     <nav class="header__nav">
       <ul>
-        <li class="active"><a href="/src/index.html">Home</a></li>
+        <li ><a href="/src/index.html">Home</a></li>
         <li><a href="/src/html/catalog.html">Catalog<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a></li>
         <li><a href="/src/html/about.html">About Us</a></li>
         <li><a href="/src/html/contact.html">Contact Us</a></li>
@@ -57,7 +57,7 @@
 
     <nav class="header__mobile-nav">
       <ul>
-        <li class="active"><a href="/src/index.html">Home</a></li>
+        <li><a href="/src/index.html">Home</a></li>
         <li><a href="/src/html/catalog.html">Catalog<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a></li>
         <li><a href="/src/html/about.html">About Us</a></li>
         <li><a href="/src/html/contact.html">Contact Us</a></li>
@@ -89,188 +89,161 @@
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <div class="hero__content">
-          <h1>Smart Styles for <br>Every Destination</h1>
-          <p>Phasellus risus turpis, pretium sit amet magna non, molestie ultricies enim.<br>Nullam pulvinar felis at metus.</p>
-          <button class="main-btn"><a href="/src/html/catalog.html">View All Items</a></button>
-        </div>
-        <div class="hero__image">
-          <img src="/src/img/Homepage/header image.png" alt="Vintage Suitcase Stack">
-        </div>
-      </div>
-    </section>
 
-    <section class="cmo-section">
-      <div class="container cmo-section__container">
-        <div class="cmo-section__left">
-          <div class="content-wrapper">
-            <div class="author">
-              <img src="/src/img/Homepage/CMO image.png" alt="Lillian Bennett">
-              <div class="author-info">
-                <h4>Lillian Bennett</h4>
-                <span>Chief Marketing Officer</span>
+  <main>
+    <section class="product-details">
+      <div class="container container--small">
+        <div class="product-details__container">
+          <div class="product-details__gallery">
+            <div class="main-image">
+              <img id="product-main-img" src="../img/Homepage/suitcase yellow.png" alt="Yellow Suitcase Pro">
+            </div>
+            <div class="thumbnails" id="product-thumbnails">
+              <div class="thumb active"><img src="../img/Homepage/suitcase yellow.png" alt="Thumb 1"></div>
+            </div>
+          </div>
+          
+          <div class="product-details__info">
+            <h1 id="product-title">Global Explorer Max Comfort Suitcase Pro</h1>
+            <div class="rating">
+              <span class="stars" id="product-rating-stars">★★★★☆</span>
+              <span class="reviews-count" id="product-reviews-count">(1 Client Review)</span>
+            </div>
+            <p class="price" id="product-price">$250</p>
+            
+            <div class="description">
+              <p>The new Global Explorer Max Comfort Suitcase Pro is a bold reimagining of travel essentials, designed to elevate every journey. Made with at least 30% recycled materials, its lightweight yet impact-resistant shell combines eco-conscious innovation with rugged durability.</p>
+              <p>The ergonomic handle and GlideMotion spinner wheels ensure effortless mobility while making a statement in sleek design. Inside, the modular compartments and adjustable straps keep your belongings secure and neatly organized, no matter the destination.</p>
+            </div>
+
+            <div class="options">
+              <div class="form-group">
+                <label>Size</label>
+                <select id="size-select">
+                  <option value="">Choose option</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Color</label>
+                <select id="color-select">
+                  <option value="">Choose option</option>
+                  <option value="red">Red</option>
+                  <option value="blue">Blue</option>
+                  <option value="black">Black</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Category</label>
+                <select id="category-select"><option value="">Choose option</option></select>
               </div>
             </div>
-            <h2>Aliquam Faucibus Odionecom.</h2>
-            <p>Duis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna. Duis rutrum non risus in imperdiet. Proin molestie accumsan nulla sit.</p>
-            <p>Namaki duis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna.</p>
+
+            <div class="actions">
+              <div class="quantity">
+                <button id="qty-minus">-</button>
+                <input type="text" id="qty-input" value="1" readonly>
+                <button id="qty-plus">+</button>
+              </div>
+              <button class="main-btn" id="add-to-cart-btn">Add To Cart</button>
+            </div>
+
+            <div class="payments">
+              <span>Payment:</span>
+              <img src="/src/img/Product Card/visa-pay-logo.png" alt="Visa">
+              <img src="/src/img/Product Card/american-express-logo.png" alt="Amex">
+              <img src="/src/img/Product Card/master-card-logo.png" alt="Mastercard">
+              <img src="/src/img/Product Card/paypal-logo.png" alt="PayPal">
+            </div>
           </div>
         </div>
-        <div class="cmo-section__right">
-          <img src="/src/img/Homepage/suitcases main banner.png" alt="Suitcases setup">
-          <div class="overlay">
-            <h2>25 % Discount</h2>
-            <p>Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut imperdiet et leo in vulputate.</p>
-            <button class="main-btn">Get Discount</button>
-          </div>
-        </div>
       </div>
     </section>
 
-    <section class="travel-suitcases">
-      <div class="container">
-        <h2 class="title-h2">Travel suitcases</h2>
-        <p class="subtitle-p">Duis vestibulum elit vel neque pharetra</p>
-        <div class="carousel-wrapper">
-  <button class="carousel-btn prev-btn" aria-label="Previous slide">&#10094;</button>
-  
-  <div class="travel-suitcases__grid">
-    
-    <div class="travel-suitcases__item">
-      <img src="/src/img/Homepage/suitcase real-live-1.png" alt="Suitcase 1">
-      <div class="overlay">
-        <h3>Duis vestibulum elit vel neque.</h3>
-        <p>Duis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna.</p>
+    <section class="container">
+      <div class="product-tabs">
+        <ul>
+          <li class="active tab-trigger" data-tab="details">DETAILS</li>
+          <li class="tab-trigger" data-tab="reviews">REVIEWS</li>
+          <li class="tab-trigger" data-tab="shipping">SHIPPING POLICY</li>
+        </ul>
       </div>
-    </div>
-    
-    <div class="travel-suitcases__item">
-      <img src="/src/img/Homepage/suitcase real-live-2.png" alt="Suitcase 2">
-      <div class="overlay">
-        <h3>Neque vestibulum elit nequvel.</h3>
-        <p>Duis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna.</p>
-      </div>
-    </div>
-    
-    <div class="travel-suitcases__item">
-      <img src="/src/img/Homepage/suitcase real-live-3.png" alt="Suitcase 3">
-      <div class="overlay">
-        <h3>Elituis stibulum elit velneque.</h3>
-        <p>Duis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna.</p>
-      </div>
-    </div>
-    
-    <div class="travel-suitcases__item">
-      <img src="/src/img/Homepage/suitcase real-live.png" alt="Suitcase 4">
-      <div class="overlay">
-        <h3>Vel vestibulum elit tuvel euqen.</h3>
-        <p>Duis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna.</p>
-      </div>
-    </div>
-    <div class="travel-suitcases__item">
-      <img src="/src/img/Homepage/suitcase real-live-1.png" alt="Suitcase 1">
-      <div class="overlay">
-        <h3>Duis vestibulum elit vel neque.</h3>
-        <p>Duis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna.</p>
-      </div>
-    </div>
-    
-    <div class="travel-suitcases__item">
-      <img src="/src/img/Homepage/suitcase real-live-2.png" alt="Suitcase 2">
-      <div class="overlay">
-        <h3>Neque vestibulum elit nequvel.</h3>
-        <p>Duis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna.</p>
-      </div>
-    </div>
-    
-    <div class="travel-suitcases__item">
-      <img src="/src/img/Homepage/suitcase real-live-3.png" alt="Suitcase 3">
-      <div class="overlay">
-        <h3>Elituis stibulum elit velneque.</h3>
-        <p>Duis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna.</p>
-      </div>
-    </div>
-    
-    <div class="travel-suitcases__item">
-      <img src="/src/img/Homepage/suitcase real-live.png" alt="Suitcase 4">
-      <div class="overlay">
-        <h3>Vel vestibulum elit tuvel euqen.</h3>
-        <p>Duis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna.</p>
-      </div>
-    </div>
-
-  </div>
-  
-  <button class="carousel-btn next-btn" aria-label="Next slide">&#10095;</button>
-</div>
-      </div>
-    </section>
-
-    <section class="product-section">
-      <div class="container">
-        <h2 class="title-h2">Selected Products</h2>
-        <p class="subtitle-p">Duis vestibulum elit vel neque pharetra</p>
-        
-        <div class="product-section__grid" id="selected-products-grid">
-          
+      
+      <div class="product-tab-content" style="margin-top: 30px;">
+        <div class="content-panel active" id="tab-details">
+          <p>Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh mollis. Nulla porta risus id neque tempor, in efficitur justo imperdiet. Etiam a ex at ante tincidunt imperdiet. Nunc congue ex vel nisl viverra, sit amet aliquet lectus ullamcorper.</p>
+          <br>
+          <p>Proin iaculis nibh vitae lectus mollis bibendum. Quisque varius eget urna sit amet luctus. Suspendisse potenti. Curabitur ac placerat est, sit amet sodales risus.</p>
         </div>
-      </div>
-    </section>
-
-    <section class="offer-banner">
-      <div class="container">
-      <div class="overlay">
-        <div class="discount-wrapper">
-          <div class="discount">50%</div>
-          <p class="discount-text">Curabitur vulputate arcu odio, ac facilisis diam.</p>
-        </div>
-        <div class="text">
-          <h2>Offer Of The Month</h2>
-          <p>Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut imperdiet et leo in vulputate.</p>
-          <button class="main-btn">Get Offer Today</button>
-        </div>
-      </div>
-      </div>
-    </section>
-
-    <section class="product-section">
-      <div class="container">
-        <h2 class="title-h2">New Products Arrival</h2>
-        <p class="subtitle-p">Duis vestibulum elit vel neque pharetra</p>
-        
-        <div class="product-section__grid" id="new-arrivals-grid">
-          
-        </div>
-      </div>
-    </section>
-
-    <section class="testimonials">
-      <div class="container">
-        <h2 class="title-h2">Our Grateful Customers</h2>
-        <p class="subtitle-p">Duis vestibulum elit vel neque pharetra</p>
-        
-        <div class="testimonials__grid">
-          <div class="testimonials__card">
-            <img src="/src/img/Homepage/grateful customer 1.png" alt="Ethan Wade">
-            <p>Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut imperdiet et leo in vulputate.</p>
-            <h4>Ethan Wade, New York</h4>
+        <div class="content-panel" id="tab-reviews" style="display:none;">
+          <div class="reviews-left">
+            <div class="product-response__header">
+              <p>1 review for <strong>Global Explorer Max Comfort Suitcase Pro</strong></p>
+            </div>
+            <div class="product-response__content">
+              <div class="review-user-info">
+                <img src="/src/img/Product Card/review customer.png" alt="Avatar">
+                <div class="review-details">
+                  <div class="review-author">
+                    <span class="name">Ella Harper</span>
+                    <span class="date">/ June 11, 2025</span>
+                  </div>
+                  <div class="review-stars">
+                    <span style="color: #f1c40f;">★★★★★</span>
+                  </div>
+                </div>
+              </div>
+              <div class="review-text">
+                Proin iaculis nibh vitae lectus mollis bibendum. Quisque varius eget urna sit amet luctus. Suspendisse potenti curabitur ac placerat est, sit amet sodales risus.
+              </div>
+            </div>
           </div>
           
-          <div class="testimonials__card">
-            <img src="/src/img/Homepage/grateful customer 2.png" alt="Jane Reyes">
-            <p>Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut imperdiet et leo in vulputate.</p>
-            <h4>Jane Reyes, California</h4>
-          </div>
-          
-          <div class="testimonials__card">
-            <img src="/src/img/Homepage/grateful customer 3.png" alt="Erica Banks">
-            <p>Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut imperdiet et leo in vulputate.</p>
-            <h4>Erica Banks, Miami</h4>
+          <div class="reviews-right">
+            <h3 class="add-review-title">Add Review</h3>
+            <p class="review-disclaimer">Your email address won't be shared with anybody. Required fields have the symbol *</p>
+            
+            <div class="review-rate">
+              <span class="label">RATE PRODUCT</span>
+              <span class="stars-empty" style="color: #f1c40f; font-size: 1.2rem;">☆☆☆☆☆</span>
+            </div>
+
+            <div id="review-success" style="display:none; padding:15px; margin-bottom:20px; background:#e8f5e9; color:#2e7d32; border-radius:4px; border:1px solid #c8e6c9;">
+              Success! Your review has been submitted.
+            </div>
+            
+            <form id="review-form" class="custom-review-form">
+              <div class="form-group">
+                <textarea id="reviewer-text" required rows="6" placeholder="Your Review *"></textarea>
+              </div>
+              <div class="form-row">
+                <div class="form-group half">
+                  <input type="text" id="reviewer-name" required placeholder="Your Name *">
+                </div>
+                <div class="form-group half">
+                  <input type="email" id="reviewer-email" required placeholder="Your Email *">
+                </div>
+              </div>
+              <div class="form-checkbox">
+                <input type="checkbox" id="save-info">
+                <label for="save-info">Save my name, email, and website in this browser for when I leave another comment.</label>
+              </div>
+              <button type="submit" class="main-btn submit-review-btn">SUBMIT</button>
+            </form>
           </div>
         </div>
+        <div class="content-panel" id="tab-shipping" style="display:none;">
+          <p>Standard shipping takes 5-7 business days. Express shipping is available at checkout. All duties and sales taxes are calculated based on your shipping address.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="you-may-also-like container">
+      <h2>You May Also Like</h2>
+      <div class="product-section__grid" id="recommended-products-grid">
+         
       </div>
     </section>
   </main>
@@ -371,6 +344,6 @@
       &copy; Copyright 2025
     </div>
   </footer>
-<script src="../dist/js/main.js" type="module"></script>
+  <script src="/dist/js/main.js" type="module"></script>
 </body>
 </html>

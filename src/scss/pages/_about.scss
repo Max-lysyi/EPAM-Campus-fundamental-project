@@ -33,7 +33,7 @@
 }
 
 .about-features {
-  padding: var(--spacing-xxl) 0;
+  padding: var(--spacing-xl) 0;
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--spacing-xl);
@@ -82,9 +82,9 @@
 }
 
 .about-arrivals {
-  padding: var(--spacing-xxl) 0;
+  padding: var(--spacing-xl) 0;
   @include flex(space-between, center, column, 40px);
-
+padding: 20px;
   @include mq-m {
     flex-direction: row;
     align-items: flex-start;
@@ -126,8 +126,9 @@
 }
 
 .about-team {
-  padding: var(--spacing-xxl) 0;
+  padding: var(--spacing-xl) 20px;
   text-align: center;
+
 
   h2 {
     font-size: 2.5rem;

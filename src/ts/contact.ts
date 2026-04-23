@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const inputs = form.querySelectorAll('input, textarea') as NodeListOf<HTMLInputElement | HTMLTextAreaElement>;
   const statusMsg = document.getElementById('formStatus') as HTMLDivElement;
 
-  // Real-time validation for email
+  
   const emailInput = document.getElementById('email') as HTMLInputElement;
   if (emailInput) {
     emailInput.addEventListener('input', () => {
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Validate other fields on blur
+  
   inputs.forEach(input => {
     if (input.id !== 'email') {
       input.addEventListener('blur', () => {
@@ -33,13 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (isValid) {
-      // Show success without reloading
+      
       statusMsg.className = 'status-msg success';
       statusMsg.textContent = 'Thank you for your message! We will get back to you soon.';
       statusMsg.style.display = 'block';
       form.reset();
       
-      // Clean up validation state classes on reset
+      
       inputs.forEach(input => {
         const group = input.closest('.form-group');
         if (group) {

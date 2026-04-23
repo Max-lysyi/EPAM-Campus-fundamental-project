@@ -1,0 +1,115 @@
+
+@use "../abstracts/variables" as *;
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background: var(--color-w);
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  border: 1px solid #ddd;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  
+  .modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #999;
+    &:hover { color: var(--color-b); }
+  }
+}
+
+.login-form {
+  .form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #727174;
+    font-size: 12px;
+    font-weight: 400;
+    input {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+  }
+.forgot-password {
+  a {
+    color: var(--color-main);
+    font-size: 12px;
+    font-weight: 900;
+  }
+}
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+    
+    input {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+      &:focus { outline: none; border-color: var(--color-main); }
+    }
+  }
+  
+  .password-wrapper {
+    position: relative;
+    
+    .toggle-password-btn {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      color: #999;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      
+      svg { width: 20px; height: 20px; }
+      &:hover { color: var(--color-b); }
+    }
+  }
+  
+  .error-msg {
+    display: none;
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+}

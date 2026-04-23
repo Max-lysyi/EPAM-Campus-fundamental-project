@@ -4,16 +4,17 @@
   "description": "Capstone Project TS Template",
   "main": "index.js",
   "scripts": {
-    
-  "compile": "sass src/scss:dist/css --no-source-map",
-  "watch:sass": "sass src/scss:dist/css --watch --no-source-map",
-  "serve": "live-server",
-  "dev": "npm run compile && concurrently \"npm run watch:sass\" \"npm run serve\" \"npm run watch:ts\"",
-
+    "compile": "sass src/scss:dist/css --no-source-map",
+    "watch:sass": "sass src/scss:dist/css --watch --no-source-map",
+    "serve": "live-server",
+    "dev": "npm run compile && concurrently \"npm run watch:sass\" \"npm run serve\" \"npm run watch:ts\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "echo \"Dummy build script required for Autocode Compile\"",
     "ts-compile": "npx tsc",
-    "watch:ts": "npx tsc --watch"
+    "watch:ts": "npx tsc --watch",
+    "lint:ts": "eslint \"src/**/*.ts\"",
+    "lint:scss": "stylelint \"src/**/*.scss\"",
+    "lint": "npm run lint:ts && npm run lint:scss"
   },
   "repository": {
     "type": "git",
@@ -24,9 +25,14 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.59.0",
+    "@typescript-eslint/parser": "^8.59.0",
     "concurrently": "^9.2.1",
+    "eslint": "^10.2.1",
     "live-server": "^1.2.2",
     "sass": "^1.99.0",
+    "stylelint": "^17.9.0",
+    "stylelint-config-standard-scss": "^17.0.0",
     "typescript": "^6.0.2"
   }
 }
