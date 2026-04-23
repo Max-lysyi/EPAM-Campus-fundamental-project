@@ -53,7 +53,7 @@ function renderCart() {
         <div class="item-img"><img src="${item.imageUrl}" alt="${item.name}"></div>
         <div class="item-info">
           <h3>${item.name}</h3>
-          <p>Color: ${item.color || 'Default'} | Size: ${item.size || 'Standard'}</p>
+          <p>Color: ${item.color ?? 'Default'} | Size: ${item.size ?? 'Standard'}</p>
         </div>
         <div class="item-price">$${item.price}</div>
         <div class="item-qty">
