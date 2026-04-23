@@ -4,9 +4,8 @@
 .catalog-container {
   display: flex;
   flex-direction: column;
-  
+  padding: 40px 10px 0;
   padding-bottom: var(--spacing-xxl);
-  padding: 40px 10px 0 10px;
 
 
   @include mq-l {
@@ -14,6 +13,7 @@
     gap: 50px;
   }
 }
+
 .container {
   max-width: 1300px;
   margin: 0 auto;
@@ -27,7 +27,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     background: #f9f9f9;
     padding: 15px 20px;
     border-radius: 8px;
@@ -76,7 +75,7 @@
         border-radius: 0 0 4px 4px;
         list-style: none;
         padding: 5px 0;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        box-shadow: 0 4px 12px rgb(0 0 0 / 5%);
 
         li {
           padding: 8px 15px;
@@ -118,7 +117,9 @@
 
   &__header {
     @include flex(space-between, center);
+
     margin: 30px 0;
+
     .results-text {
       color: var(--color-main-gray);
       font-size: 0.95rem;
@@ -151,6 +152,7 @@
 
   .catalog-pagination {
     margin: 60px 0;
+
     @include flex(center, center, row, 15px);
     
     .page-link, .page-next {
@@ -232,6 +234,7 @@
     
     .best-set-item {
       @include flex(flex-start, center, row, 15px);
+
       margin-bottom: var(--spacing-m);
       
       .img-wrap {
@@ -239,6 +242,7 @@
         height: 80px;
         background-color: #f7f7f7;
         border-radius: 4px;
+
         @include flex(center, center);
         
         img {

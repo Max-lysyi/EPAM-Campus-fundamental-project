@@ -1,6 +1,7 @@
 import { fetchProducts } from './catalog.js';
 import { addToCart } from './store.js';
 
+
 export async function initProductPage() {
   const urlParams = new URLSearchParams(window.location.search);
   const id = urlParams.get('id');
@@ -126,7 +127,16 @@ export async function initProductPage() {
   renderRecommended(products, id);
 }
 
-function renderRecommended(allProducts: any[], currentId: string) {
+interface LocalProduct {
+  id: string;
+  name: string;
+  price: number;
+  imageUrl: string;
+  color?: string; 
+  size?: string;
+  salesStatus?: boolean; 
+}
+function renderRecommended(allProducts: LocalProduct[], currentId: string) {
   const container = document.getElementById('recommended-products-grid');
   if (!container) return;
 

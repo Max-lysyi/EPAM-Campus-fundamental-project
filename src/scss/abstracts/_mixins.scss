@@ -1,4 +1,4 @@
-@mixin flex ($cont: center, $item: center, $dir: row, $g: 0) {
+@mixin flex($cont: center, $item: center, $dir: row, $g: 0) {
   display: flex;
   justify-content: $cont;
   align-items: $item;
@@ -7,19 +7,19 @@
 }
 
 @mixin mq-s {
-  @media (min-width: 768px) {
+  @media (width >= 768px) {
     @content;
   }
 }
 
 @mixin mq-m {
-  @media (min-width: 1024px) {
+  @media (width >= 1024px) {
     @content;
   }
 }
 
 @mixin mq-l {
-  @media (min-width: 1440px) {
+  @media (width >= 1440px) {
     @content;
   }
 }

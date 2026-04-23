@@ -4,7 +4,6 @@
 .product-card {
   border-radius: 4px;
   width: 300px;
-  
   text-align: center;
   position: relative;
   margin: 0 auto;
@@ -16,11 +15,23 @@
   align-items: center;
   height: 140px;
   margin-top: 25px;
+
+    h4 {
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .price {
+      font-weight: 700;
+      color: var(--color-main-gray);
+      font-size: 1.1rem;
+    }
  }
+
   &:hover {
     .product-card__image {
       img { 
-        box-shadow: 0 0px 50px 30px rgba(0,0,0,0.05);
+        box-shadow: 0 0 50px 30px rgb(0 0 0 / 5%);
        }
     }
   }
@@ -38,8 +49,8 @@
   }
 
   &__image {
-
     @include flex(center, center);
+
     img {
       transition: box-shadow 0.3s ease;
       width: 100%;
@@ -48,21 +59,7 @@
     }
   }
 
-  &__info {
-    h4 {
-      font-weight: 700;
-      font-size: 1.05rem;
-      
-    }
 
-    .price {
-
-      font-weight: 700;
-      color: var(--color-main-gray);
-      font-size: 1.1rem;
-      
-    }
-  }
 
   
   

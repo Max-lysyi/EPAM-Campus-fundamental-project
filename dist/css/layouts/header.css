@@ -1,6 +1,6 @@
 :root {
-  --color-b: #000000;
-  --color-w: #FFFFFF;
+  --color-b: #000;
+  --color-w: #FFF;
   --color-main: #B92770;
   --color-main-gray: #504E4A;
   --color-bg-gray: #EFEFEF;
@@ -15,10 +15,10 @@
   --spacing-xl: 100px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (width <= 480px) {
   .header__top {
     display: none;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
   .header__nav {
     display: none;
@@ -46,12 +46,12 @@
   margin: 0 auto;
   padding: 0 20px;
 }
-@media (min-width: 1440px) {
+@media (width >= 1440px) {
   .header__top {
     max-width: 1400px;
   }
 }
-@media screen and (min-width: 481px) {
+@media screen and (width >= 481px) {
   .header__top {
     margin-bottom: 10px;
   }
@@ -59,7 +59,7 @@
 .header__socials {
   display: none;
 }
-@media screen and (min-width: 481px) {
+@media screen and (width >= 481px) {
   .header__socials {
     display: flex;
     justify-content: flex-start;
@@ -101,7 +101,7 @@
   border: none;
   cursor: pointer;
 }
-@media screen and (max-width: 480px) {
+@media screen and (width <= 480px) {
   .header__hamburger-btn {
     display: flex;
   }
@@ -109,7 +109,7 @@
 .header__actions {
   display: none;
 }
-@media screen and (min-width: 481px) {
+@media screen and (width >= 481px) {
   .header__actions {
     display: flex;
     justify-content: flex-end;
@@ -228,10 +228,10 @@
 .header__mobile-nav ul li a:hover {
   color: var(--color-main);
 }
-.header__mobile-nav ul li:nth-child(1):after,
-.header__mobile-nav ul li:nth-child(2):after,
-.header__mobile-nav ul li:nth-child(3):after,
-.header__mobile-nav ul li:nth-child(4):after {
+.header__mobile-nav ul li:nth-child(1)::after,
+.header__mobile-nav ul li:nth-child(2)::after,
+.header__mobile-nav ul li:nth-child(3)::after,
+.header__mobile-nav ul li:nth-child(4)::after {
   content: "";
   display: flex;
   width: 100%;
@@ -242,10 +242,10 @@
 .header__mobile-nav ul li.active a {
   color: var(--color-main);
 }
-.header__mobile-nav ul li.active:nth-child(1):after,
-.header__mobile-nav ul li.active:nth-child(2):after,
-.header__mobile-nav ul li.active:nth-child(3):after,
-.header__mobile-nav ul li.active:nth-child(4):after {
+.header__mobile-nav ul li.active:nth-child(1)::after,
+.header__mobile-nav ul li.active:nth-child(2)::after,
+.header__mobile-nav ul li.active:nth-child(3)::after,
+.header__mobile-nav ul li.active:nth-child(4)::after {
   content: "";
   display: flex;
   width: 100%;

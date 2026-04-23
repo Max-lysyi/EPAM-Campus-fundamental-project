@@ -39,7 +39,7 @@ export async function fetchProducts(): Promise<Product[]> {
     const response = await fetch('/src/assets/data.json'); 
     const data = await response.json();
     return data.data; 
-  } catch (error) {
+  } catch {
   
     return [];
   }
@@ -113,7 +113,7 @@ function setupFilters() {
         target.classList.add('selected');
 
         
-        (filters[filterType] as any) = filterValue;
+        (filters as Record<keyof FilterState, string | boolean | null>)[filterType] = filterValue;
         
         currentPage = 1; 
         applyState();

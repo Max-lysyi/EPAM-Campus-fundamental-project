@@ -7,6 +7,7 @@
 
   &__container {
     @include flex(flex-start, flex-start, column, 40px);
+
     margin: 5rem 0;
     
     @include mq-m {
@@ -23,7 +24,9 @@
       border-radius: 4px;
       overflow: hidden;
       margin-bottom: var(--spacing-m);
+
       @include flex(center, center);
+
       padding: var(--spacing-xxl);
       width: 100%;
       height: calc(100% - 150px);
@@ -45,7 +48,9 @@
         background-color: #f7f7f7;
         border-radius: 4px;
         cursor: pointer;
+
         @include flex(center, center);
+
         transition: border 0.3s;
         border: 2px solid transparent;
         
@@ -75,6 +80,7 @@
 
     .rating {
       @include flex(flex-start, center, row, 10px);
+
       margin-bottom: var(--spacing-s);
       
       .stars {
@@ -82,6 +88,7 @@
         letter-spacing: 2px;
         font-size: 0.9rem;
       }
+
       .reviews-count {
         color: var(--color-main-gray);
         font-size: 0.85rem;
@@ -134,10 +141,12 @@
 
     .actions {
       @include flex(flex-start, center, row, 15px);
+
       margin-bottom: var(--spacing-l);
 
       .quantity {
         @include flex(center, center, row);
+
         border: 1px solid var(--color-main);
         border-radius: 4px;
         height: 48px;
@@ -171,14 +180,17 @@
 
     .payments {
       @include flex(flex-start, center, row, 15px);
-     @media screen and (max-width: 480px) {
+
+     @media screen and (width <= 480px) {
       flex-direction: column;
      }
+
       span {
         font-weight: 700;
         font-size: 1.5rem;
         color: var(--color-main-gray);
       }
+
       img {
         height: 15px;
         object-fit: contain;
@@ -214,7 +226,6 @@
 }
 
 .product-tab-content {
-
   margin-bottom: 5rem;
   
   .content-panel {
@@ -225,7 +236,8 @@
        justify-content: space-between;
        align-items: flex-start;
        gap: 40px;
-       @media screen and (max-width: 768px) {
+
+       @media screen and (width <= 768px) {
         flex-direction: column;
         align-items: center;
        }
@@ -245,6 +257,7 @@
       
       .product-response__header {
         margin-bottom: 20px;
+
         p {
           color: var(--color-b);
           font-size: 1rem;
@@ -277,6 +290,7 @@
                 color: var(--color-b);
                 font-size: 0.95rem;
               }
+
               .date {
                 color: #a4a4a4;
                 font-size: 0.85rem;
@@ -384,6 +398,7 @@
 
 .you-may-also-like {
   margin-bottom: 5rem;
+
   h2 {
     font-size: 2rem;
     font-weight: 900;

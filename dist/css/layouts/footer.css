@@ -1,6 +1,6 @@
 :root {
-  --color-b: #000000;
-  --color-w: #FFFFFF;
+  --color-b: #000;
+  --color-w: #FFF;
   --color-main: #B92770;
   --color-main-gray: #504E4A;
   --color-bg-gray: #EFEFEF;
@@ -37,7 +37,7 @@
   margin: 0 auto;
   padding: 0 20px;
 }
-@media (min-width: 1440px) {
+@media (width >= 1440px) {
   .footer__benefits .container {
     max-width: 1400px;
   }
@@ -52,12 +52,12 @@
   grid-template-columns: 1fr;
   gap: var(--spacing-m);
 }
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .footer__benefits .benefits-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
   .footer__benefits .benefits-grid {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -90,7 +90,7 @@
   margin: 0 auto;
   padding: 0 20px;
 }
-@media (min-width: 1440px) {
+@media (width >= 1440px) {
   .footer__main .container {
     max-width: 1400px;
   }
@@ -100,7 +100,7 @@
   grid-template-columns: 2fr;
   gap: var(--spacing-l);
 }
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
   .footer__main .footer-grid {
     grid-template-columns: 1fr 1fr 1fr 2fr;
   }
@@ -133,7 +133,7 @@
   width: 100%;
   grid-column: 4;
 }
-@media screen and (max-width: 768px) {
+@media screen and (width <= 768px) {
   .footer__main .contact-info {
     grid-column: span 2;
   }

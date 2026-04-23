@@ -4,7 +4,7 @@ export function getCart() {
         const raw = localStorage.getItem(CART_KEY);
         return raw ? JSON.parse(raw) : [];
     }
-    catch (e) {
+    catch (_a) {
         return [];
     }
 }

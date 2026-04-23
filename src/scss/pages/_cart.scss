@@ -11,12 +11,13 @@
   position: relative;
   
   .overlay {
-    background: rgba(0,0,0,0.4);
+    background: rgb(0 0 0 / 40%);
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+
     h1 {
       color: var(--color-w);
       font-size: 2.5rem;
@@ -39,20 +40,20 @@
   display: grid;
   grid-template-columns: 120px 2fr 1fr 1fr 1fr 80px;
   gap: 20px;
+  padding: 20px 40px;
   padding-bottom: 15px;
   font-weight: 700;
   font-size: 0.9rem;
-  
   margin-bottom: 20px;
   min-width: 700px;
   background-color: var(--color-main-gray);
   color: var(--color-w);
-  padding: 20px 40px;
   
   div { 
     display: flex;
     align-items: center;
   }
+
   .col-price, .col-qty, .col-total, .col-delete {
     justify-content: center;
   }
@@ -83,6 +84,7 @@
       font-weight: 700;
       margin-bottom: 5px;
     }
+
     p {
       font-size: 0.85rem;
       color: #666;
@@ -99,17 +101,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     .qty-btn {
       width: 30px;
       height: 30px;
       border: none;
-      
       cursor: pointer;
       font-size: 1.5rem;
       font-weight: 900;
       &:hover { background: #eee; }
     }
+
     .qty-val {
       width: 40px;
       text-align: center;
@@ -122,12 +124,13 @@
   .item-delete {
     display: flex;
     justify-content: center;
+
     button {
       background: transparent;
       border: none;
       cursor: pointer;
       color: var(--color-main);
-      svg { width: 24px; height: 24px; stroke: currentColor; fill: none; }
+      svg { width: 24px; height: 24px; stroke: currentcolor; fill: none; }
       &:hover { color: #8e1f53; }
     }
   }
@@ -137,6 +140,7 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+
   @include mq-m {
     flex-direction: row;
     justify-content: space-between;
@@ -147,6 +151,7 @@
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
+
     .main-btn {
       padding: 12px 25px;
       font-size: 0.9rem;
@@ -169,11 +174,12 @@
     margin-bottom: 15px;
     font-size: 1rem;
     font-weight: 700;
+
     &--total {
       font-size: 1.3rem;
       margin-top: 20px;
       padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.2);
+      border-top: 1px solid rgb(255 255 255 / 20%);
     }
   }
   

@@ -7,13 +7,13 @@
 
   a {
     transition: color 0.3s;
+
     &:hover {
       color: var(--color-main);
     }
   }
 
   &__benefits {
-    
     background-image: url('../../src/img/Homepage/footer_bg_img.jpg');
     background-size: cover;
     background-position: center;
@@ -21,6 +21,7 @@
 
     .container {
       @include container;
+
       position: relative;
       z-index: 1;
       padding: var(--spacing-l) 20px;
@@ -35,17 +36,20 @@
       @include mq-s {
         grid-template-columns: repeat(2, 1fr);
       }
+
       @include mq-m {
         grid-template-columns: repeat(4, 1fr);
       }
 
       .benefit-item {
         @include flex(center, center, row, 15px);
+
         svg, img {
           width: 50px;
           height: 50px;
           fill: var(--color-w);
         }
+
         p {
           font-size: 0.85rem;
           line-height: 1.4;
@@ -69,9 +73,6 @@
       grid-template-columns: 2fr;
       gap: var(--spacing-l);
 
-      @include mq-s {
-        
-      }
       @include mq-m {
         grid-template-columns: 1fr 1fr 1fr 2fr;
       }
@@ -95,9 +96,11 @@
         }
       }
     }
+
     .footer-col_def {
       grid-column: span 2;
     }
+
     .contact-info {
       display: flex;
       flex-direction: row;
@@ -106,14 +109,18 @@
       gap: 20px;
       width: 100%;
       grid-column: 4;
-      @media screen and (max-width: 768px) {
+
+      @media screen and (width <= 768px) {
         grid-column: span 2;
       }
+
       .contact-item {
         @include flex(flex-start, center, row, 10px);
+
         font-size: 15px;
         color: var(--color-main-gray);
         margin-bottom: 30px;
+
         svg {
           width: 20px;
           margin-top: 2px;

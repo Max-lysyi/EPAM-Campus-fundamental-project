@@ -1,5 +1,6 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/variables" as *;
+
 .hero {
   background-color: var(--color-bg-gray);
   padding: var(--spacing-xl) 0;
@@ -41,6 +42,7 @@
     flex: 1;
     display: flex;
     justify-content: center;
+
     img {
       max-width: 100%;
       height: auto;

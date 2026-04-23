@@ -10,7 +10,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 import { fetchProducts } from "./catalog.js";
 import { addToCart } from "./store.js";
 export function initCarousel() {
-    console.log('Карусель ініціалізовано: старий автоскрол видалено!');
     const container = document.querySelector('.travel-suitcases__grid');
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');

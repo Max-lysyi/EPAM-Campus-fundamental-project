@@ -1,5 +1,6 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/variables" as *;
+
 .product-section {
   padding: var(--spacing-xl) 0;
 
@@ -16,6 +17,7 @@
     @include mq-s {
       grid-template-columns: repeat(2, 1fr);
     }
+
     @include mq-l {
       grid-template-columns: repeat(4, 1fr);
     }

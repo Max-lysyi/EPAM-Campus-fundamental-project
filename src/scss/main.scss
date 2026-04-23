@@ -1,29 +1,16 @@
 @use "abstracts/variables" as *;
 @use "abstracts/mixins" as *;
-
-
 @use "base/reset";
-@use "base/fonts";
-
-
 @use "components/product-card";
 @use "components/buttons";
 @use "components/modal";
-@use "components/forms";
-
-
-
-
 @use "layouts/header";
 @use "layouts/footer";
-
-
 @use "pages/catalog";
 @use "pages/product-details";
 @use "pages/about";
 @use "pages/contact";
 @use "pages/cart";
-
 @use "pages/cmo";
 @use "pages/travel";
 @use "pages/offer";
@@ -42,6 +29,7 @@ body {
   font-weight: 900;
   text-align: center;
   margin-bottom: var(--spacing-xs);
+
   @include mq-m {
     font-size: 2.5rem;
   }

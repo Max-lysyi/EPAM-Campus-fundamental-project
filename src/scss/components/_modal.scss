@@ -7,7 +7,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.6);
+  background: rgb(0 0 0 / 60%);
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -22,7 +22,7 @@
   max-width: 400px;
   position: relative;
   border: 1px solid #ddd;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
   
   .modal-close {
     position: absolute;
@@ -44,6 +44,7 @@
     justify-content: space-between;
     
   }
+
   .checkbox-group {
     display: flex;
     align-items: center;
@@ -51,12 +52,14 @@
     color: #727174;
     font-size: 12px;
     font-weight: 400;
+
     input {
       width: 16px;
       height: 16px;
       cursor: pointer;
     }
   }
+
 .forgot-password {
   a {
     color: var(--color-main);
@@ -64,6 +67,7 @@
     font-weight: 900;
   }
 }
+
   .form-group {
     margin-bottom: 20px;
     text-align: left;
@@ -80,7 +84,10 @@
       padding: 12px 15px;
       border: 1px solid #ccc;
       font-family: inherit;
-      &:focus { outline: none; border-color: var(--color-main); }
+      &:focus { 
+        outline: none; 
+        border-color: var(--color-main);
+      }
     }
   }
   
@@ -101,8 +108,13 @@
       justify-content: center;
       padding: 5px;
       
-      svg { width: 20px; height: 20px; }
-      &:hover { color: var(--color-b); }
+      svg { 
+        width: 20px; 
+        height: 20px;
+      }
+      &:hover { 
+        color: var(--color-b); 
+      }
     }
   }
   

@@ -1,19 +1,23 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
-@media screen and (max-width: 480px) {
+
+@media screen and (width <= 480px) {
   .header {
     &__top {
       display: none;
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
+
     &__nav {
       display: none;
     }
+
     &__mobile-nav {
       display: flex;
     }
   }
 }
+
 .header {
   position: sticky;
   top: 0;
@@ -25,16 +29,19 @@
   &__top {
     @include flex(space-between, center);
     @include container;
-    @media screen and (min-width: 481px) {
+
+    @media screen and (width >= 481px) {
       margin-bottom: 10px;
     }
   }
 
   &__socials {
     display: none;
-    @media screen and (min-width: 481px) {
+
+    @media screen and (width >= 481px) {
       @include flex(flex-start, center, row, 15px);
     }
+
     a {
       font-size: 1.2rem;
       color: var(--color-b);
@@ -42,6 +49,7 @@
       &:hover { color: var(--color-main); }
 
     }
+
     img {
       width: 20px;
     }
@@ -49,9 +57,11 @@
 
   &__logo {
     @include flex(center, center, row, 10px);
+
     font-weight: 900;
     font-size: 1.5rem;
     color: var(--color-main);
+
     img {
       background-color: var(--color-main);
       border-radius: 25%;
@@ -60,22 +70,26 @@
       
     }
   }
+
   &__hamburger-btn {
     display: none;
     z-index: 1000;
     background-color: var(--color-w);
     border: none;
     cursor: pointer;
-    @media screen and (max-width: 480px) {
+
+    @media screen and (width <= 480px) {
       display: flex;
     }
   }
 
   &__actions {
     display: none;
-    @media screen and (min-width: 481px) {
+
+    @media screen and (width >= 481px) {
       @include flex(flex-end, center, row, 20px);
     }
+
     button {
       font-size: 1.2rem;
       color: var(--color-b);
@@ -96,6 +110,7 @@
         line-height: 1;
       }
     }
+
     svg {
       width: 24px;
       height: 24px;
@@ -124,9 +139,11 @@
       }
     }
   }
+
 &__mobile-actions {
   display: flex;
   gap: 10px;
+
   button {
       font-size: 1.2rem;
       color: var(--color-b);
@@ -147,11 +164,13 @@
         line-height: 1;
       }
     }
+
     svg {
       width: 24px;
       height: 24px;
     }
 }
+
   &__mobile-nav {
     display: none;
     justify-content: flex-start;
@@ -171,8 +190,10 @@
 
     ul {
       @include flex(flex-start, flex-start, column, 40px);
+
       margin-left: 20px;
       margin-top: 20px;
+
       li a {
         font-weight: 700;
         font-size: 1.25rem;
@@ -183,10 +204,11 @@
         }
         
       }
-      li:nth-child(1):after, 
-      li:nth-child(2):after,
-      li:nth-child(3):after,
-      li:nth-child(4):after {
+
+      li:nth-child(1)::after, 
+      li:nth-child(2)::after,
+      li:nth-child(3)::after,
+      li:nth-child(4)::after {
           content: "";
           display: flex;
           width: 100%;
@@ -198,10 +220,11 @@
       li.active a {
         color: var(--color-main);
       }
-      li.active:nth-child(1):after, 
-      li.active:nth-child(2):after,
-      li.active:nth-child(3):after,
-      li.active:nth-child(4):after {
+
+      li.active:nth-child(1)::after, 
+      li.active:nth-child(2)::after,
+      li.active:nth-child(3)::after,
+      li.active:nth-child(4)::after {
         content: "";
         display: flex;
         width: 100%;

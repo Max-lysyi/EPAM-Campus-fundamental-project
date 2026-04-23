@@ -26,8 +26,7 @@ export function fetchProducts() {
             const data = yield response.json();
             return data.data;
         }
-        catch (error) {
-            console.error('Помилка завантаження товарів:', error);
+        catch (_a) {
             return [];
         }
     });
