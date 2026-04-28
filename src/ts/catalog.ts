@@ -151,8 +151,8 @@ function setupSearch() {
     const matchedProducts = allProducts.filter(p => p.name.toLowerCase().includes(query));
     if (matchedProducts.length > 0) {
       window.location.href = `./product.html?id=${matchedProducts[0].id}`;
-    } else {
-      if(modal) modal.style.display = 'flex';
+    } else if(modal) {
+      modal.style.display = 'flex';
     }
   };
 

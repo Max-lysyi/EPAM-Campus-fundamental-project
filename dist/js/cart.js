@@ -39,12 +39,13 @@ function renderCart() {
     emptyCartMessage.style.display = 'none';
     let html = '';
     cart.forEach(item => {
+        var _a, _b;
         html += `
       <div class="cart-item-row" data-id="${item.cartItemId}">
         <div class="item-img"><img src="${item.imageUrl}" alt="${item.name}"></div>
         <div class="item-info">
           <h3>${item.name}</h3>
-          <p>Color: ${item.color || 'Default'} | Size: ${item.size || 'Standard'}</p>
+          <p>Color: ${(_a = item.color) !== null && _a !== void 0 ? _a : 'Default'} | Size: ${(_b = item.size) !== null && _b !== void 0 ? _b : 'Standard'}</p>
         </div>
         <div class="item-price">$${item.price}</div>
         <div class="item-qty">
