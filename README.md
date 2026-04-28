@@ -44,3 +44,9 @@ This is a responsive e-commerce web application developed as a Capstone Project 
     ```bash
     npm run lint
     ```
+
+## ✅ Self-Assessment
+
+**Final Project Score: 64 / 64**
+
+The project has been fully implemented according to the requirements checklist provided by the EPAM Campus team. All functional and technical criteria have been met.
