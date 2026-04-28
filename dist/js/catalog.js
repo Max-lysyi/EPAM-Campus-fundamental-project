@@ -123,9 +123,8 @@ function setupSearch() {
         if (matchedProducts.length > 0) {
             window.location.href = `./product.html?id=${matchedProducts[0].id}`;
         }
-        else {
-            if (modal)
-                modal.style.display = 'flex';
+        else if (modal) {
+            modal.style.display = 'flex';
         }
     };
     searchBtn === null || searchBtn === void 0 ? void 0 : searchBtn.addEventListener('click', executeSearch);

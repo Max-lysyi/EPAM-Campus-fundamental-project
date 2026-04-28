@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contactForm') as HTMLFormElement;
   if (!form) return;
 
-  const inputs = form.querySelectorAll('input, textarea') as NodeListOf<HTMLInputElement | HTMLTextAreaElement>;
+  const inputs = form.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>('input, textarea');
   const statusMsg = document.getElementById('formStatus') as HTMLDivElement;
 
   
