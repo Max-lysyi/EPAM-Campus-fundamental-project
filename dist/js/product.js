@@ -167,6 +167,6 @@ function renderRecommended(allProducts, currentId) {
             return;
         }
         if (id)
-            window.location.href = `./product.html?id=${id}`;
+            window.location.href = `/EPAM-Campus-fundamental-project/html/product.html?id=${id}`;
     });
 }

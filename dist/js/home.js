@@ -91,7 +91,7 @@ export function renderSelectedProducts() {
                 return;
             }
             if (id)
-                window.location.href = `./html/product.html?id=${id}`;
+                window.location.href = `/EPAM-Campus-fundamental-project/html/product.html?id=${id}`;
         });
     });
 }
@@ -146,7 +146,7 @@ export function renderNewArrivals() {
                 return;
             }
             if (id)
-                window.location.href = `./html/product.html?id=${id}`;
+                window.location.href = `/EPAM-Campus-fundamental-project/html/product.html?id=${id}`;
         });
     });
 }
