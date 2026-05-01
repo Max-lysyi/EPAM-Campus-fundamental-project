@@ -81,20 +81,20 @@ if (fs.existsSync(jsDir)) {
   jsFiles.forEach(file => processJs(path.join(jsDir, file)));
 }
 
-// 7. Process CSS files
+// 7. Process CSS files
 const cssDir = path.join(distDir, 'css');
 if (fs.existsSync(cssDir)) {
   const processCss = (file) => {
     let content = fs.readFileSync(file, 'utf8');
     
-    // Replace /src/img/
-    content = content.replace(/url\(['"]?\/src\/img\/([^'"\)]+)['"]?\)/g, `url('${prefix}/img/$1')`);
+    // Replace /src/img/ or ../src/img/ or ../../src/img/
+    content = content.replace(/url\(\s*['"]?(?:\.\.\/)*src\/img\/([^'"\)]+)['"]?\s*\)/g, `url('${prefix}/img/$1')`);
     
-    // Replace ../../src/img/
-    content = content.replace(/url\(['"]?\.\.\/\.\.\/src\/img\/([^'"\)]+)['"]?\)/g, `url('${prefix}/img/$1')`);
+    // Replace absolute /src/img/
+    content = content.replace(/url\(\s*['"]?\/src\/img\/([^'"\)]+)['"]?\s*\)/g, `url('${prefix}/img/$1')`);
     
     // Replace ../img/
-    content = content.replace(/url\(['"]?\.\.\/img\/([^'"\)]+)['"]?\)/g, `url('${prefix}/img/$1')`);
+    content = content.replace(/url\(\s*['"]?\.\.\/img\/([^'"\)]+)['"]?\s*\)/g, `url('${prefix}/img/$1')`);
 
     fs.writeFileSync(file, content);
   };
