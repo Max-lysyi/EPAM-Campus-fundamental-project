@@ -81,4 +81,26 @@ if (fs.existsSync(jsDir)) {
   jsFiles.forEach(file => processJs(path.join(jsDir, file)));
 }
 
+// 7. Process CSS files
+const cssDir = path.join(distDir, 'css');
+if (fs.existsSync(cssDir)) {
+  const processCss = (file) => {
+    let content = fs.readFileSync(file, 'utf8');
+    
+    // Replace /src/img/
+    content = content.replace(/url\(['"]?\/src\/img\/([^'"\)]+)['"]?\)/g, `url('${prefix}/img/$1')`);
+    
+    // Replace ../../src/img/
+    content = content.replace(/url\(['"]?\.\.\/\.\.\/src\/img\/([^'"\)]+)['"]?\)/g, `url('${prefix}/img/$1')`);
+    
+    // Replace ../img/
+    content = content.replace(/url\(['"]?\.\.\/img\/([^'"\)]+)['"]?\)/g, `url('${prefix}/img/$1')`);
+
+    fs.writeFileSync(file, content);
+  };
+
+  const cssFiles = fs.readdirSync(cssDir).filter(f => f.endsWith('.css'));
+  cssFiles.forEach(file => processCss(path.join(cssDir, file)));
+}
+
 console.log('Build script complete: Files copied and paths rewritten for GitHub Pages!');
