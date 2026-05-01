@@ -22,7 +22,7 @@ let filters = {
 export function fetchProducts() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const response = yield fetch('/src/assets/data.json');
+            const response = yield fetch('/EPAM-Campus-fundamental-project/assets/data.json');
             const data = yield response.json();
             return data.data;
         }
@@ -65,7 +65,7 @@ export function renderCatalog() {
                 return;
             }
             if (id)
-                window.location.href = `./product.html?id=${id}`;
+                window.location.href = `/EPAM-Campus-fundamental-project/html/product.html?id=${id}`;
         });
         setupFilters();
         setupSorting();
